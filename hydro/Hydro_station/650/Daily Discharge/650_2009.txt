@@ -1,0 +1,46 @@
+Station number: 650
+Location:       DHM                                                               Latitude: 86 11 50
+River:          Khimati Khola                                                        Longitude: 1120
+
+Year:           2009
+
+                                    Mean daily discharge in m3/s
+                                    ============================
+
+Day     Jan.   Feb.   Mar.   Apr.   May    Jun.   Jul.   Aug.   Sep.   Oct.   Nov.   Dec.   Year
+ 01     7.02   4.86   3.78   3.96   4.50   NA     NA     NA     NA     NA     12.7   NA  
+ 02     7.02   4.86   3.78   3.96   4.56   NA     NA     NA     NA     NA     12.4   NA  
+ 03     6.87   4.80   3.78   4.14   4.50   NA     NA     NA     NA     NA     12.1   NA  
+ 04     7.02   4.68   3.78   4.14   4.50   NA     NA     NA     NA     NA     11.7   NA  
+ 05     6.80   4.68   3.78   4.14   4.38   NA     NA     NA     NA     NA     12.0   NA  
+ 06     6.80   4.68   3.78   4.14   4.32   NA     NA     NA     NA     NA     11.8   NA  
+ 07     6.57   4.68   3.78   4.14   4.32   NA     NA     NA     NA     NA     11.7   NA  
+ 08     6.49   4.68   3.78   4.14   4.20   NA     NA     NA     NA     NA     11.3   NA  
+ 09     6.34   4.50   3.78   4.14   4.26   NA     NA     NA     NA     NA     11.1   NA  
+ 10     6.34   4.50   3.78   4.26   4.44   NA     NA     NA     NA     NA     11.0   NA  
+ 11     6.12   4.50   3.60   4.14   4.50   NA     NA     NA     NA     NA     10.6   NA  
+ 12     6.04   4.50   3.60   4.02   4.38   NA     NA     NA     NA     NA     10.6   NA  
+ 13     5.74   4.32   3.60   4.02   4.68   NA     NA     NA     NA     NA     10.3   NA  
+ 14     5.37   4.32   3.42   4.14   4.80   NA     NA     NA     NA     NA     10.3   NA  
+ 15     5.52   4.32   3.42   4.14   NA     NA     NA     NA     NA     NA     10.2   NA  
+ 16     5.67   4.26   3.42   4.14   NA     NA     NA     NA     NA     NA     NA     NA  
+ 17     5.52   4.14   3.60   4.26   NA     NA     NA     NA     NA     NA     NA     NA  
+ 18     5.44   4.14   3.60   4.50   NA     NA     NA     NA     NA     22.8   NA     NA  
+ 19     5.22   3.96   3.60   4.38   NA     NA     NA     NA     NA     17.5   NA     NA  
+ 20     5.22   3.96   3.78   4.32   NA     NA     NA     NA     NA     17.5   NA     NA  
+ 21     5.22   3.96   3.78   4.32   NA     NA     NA     NA     NA     17.2   NA     NA  
+ 22     5.22   3.96   3.78   4.14   NA     NA     NA     NA     NA     16.9   NA     NA  
+ 23     5.04   3.96   3.78   3.96   NA     NA     NA     NA     NA     16.2   NA     NA  
+ 24     5.04   3.96   3.78   4.08   NA     NA     NA     NA     NA     15.7   NA     NA  
+ 25     4.86   3.96   3.78   4.26   NA     NA     NA     NA     NA     15.4   NA     NA  
+ 26     5.04   3.96   3.96   4.20   NA     NA     NA     NA     NA     15.0   NA     NA  
+ 27     5.04   3.96   3.96   4.32   NA     NA     NA     NA     NA     14.6   NA     NA  
+ 28     5.04   3.84   3.96   4.50   NA     NA     NA     NA     NA     14.0   NA     NA  
+ 29     5.04          3.96   4.56   NA     NA     NA     NA     NA     13.9   NA     NA  
+ 30     4.86          3.96   4.68   NA     NA     NA     NA     NA     13.8   NA     NA  
+ 31     4.86          3.96          NA            NA     NA            13.1          NA  
+
+Min     4.86   3.84   3.42   3.96   4.20   NA     NA     NA     NA     13.1   10.2   NA     NA  
+Mean    5.76   4.32   3.75   4.21   NA     NA     NA     NA     NA     NA     NA     NA     NA  
+Max     7.02   4.86   3.96   4.68   4.80   NA     NA     NA     NA     22.8   12.7   NA     NA  
+

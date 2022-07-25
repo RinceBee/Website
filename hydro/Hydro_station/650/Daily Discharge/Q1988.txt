@@ -1,0 +1,46 @@
+Station number: 650
+Location:       Rasnalu Village                                                   Latitude: 27 34 30
+River:          Khimti Khola                                                     Longitude: 86 11 50
+
+Year:           1988
+
+                                    Mean daily discharge in m3/s
+                                    ============================
+
+Day     Jan.   Feb.   Mar.   Apr.   May    Jun.   Jul.   Aug.   Sep.   Oct.   Nov.   Dec.   Year
+ 01     NA     NA     NA     NA     5.34   6.38    114    388   67.0   NA     NA     NA  
+ 02     NA     NA     NA     NA     5.14   11.8   84.5   95.1   89.7   NA     NA     NA  
+ 03     NA     NA     NA     NA     6.38   10.6   74.7   88.4   62.6   NA     NA     NA  
+ 04     NA     NA     NA     NA     19.0   8.81   78.4    120    105   NA     NA     NA  
+ 05     NA     NA     NA     NA     5.97   8.04   97.8   93.7   61.6   NA     NA     NA  
+ 06     NA     NA     NA     NA     6.59    231   95.1   80.8   61.6   NA     NA     NA  
+ 07     NA     NA     NA     NA     5.97   34.0   89.7   69.1   58.7   NA     NA     NA  
+ 08     NA     NA     NA     NA     6.79   21.3   80.8   71.3   62.6   NA     NA     NA  
+ 09     NA     NA     NA     NA     7.78   19.4   87.0    137   56.8   NA     NA     NA  
+ 10     NA     NA     NA     NA     5.97   8.81    137   74.7   57.7   NA     NA     NA  
+ 11     NA     NA     NA     NA     7.00   9.91    156   80.8   53.9   NA     NA     NA  
+ 12     NA     NA     NA     NA     60.7   10.2   92.4   85.7   58.7   NA     NA     NA  
+ 13     NA     NA     NA     3.65   8.55   14.7    120   77.2   59.7   NA     NA     NA  
+ 14     NA     NA     NA     3.81   8.55   16.2   97.8   87.0   57.7   NA     NA     NA  
+ 15     NA     NA     NA     4.13   8.30   19.4    101   73.5   59.7   NA     NA     NA  
+ 16     NA     NA     NA     3.81   8.81   26.5   79.6   68.1   67.0   NA     NA     NA  
+ 17     NA     NA     NA     4.45   9.33   42.8    255    104   NA     NA     NA     NA  
+ 18     NA     NA     NA     4.93   9.07   51.2    143   77.2   NA     NA     NA     NA  
+ 19     NA     NA     NA     5.34   9.33    104    104   93.7   NA     NA     NA     NA  
+ 20     NA     NA     NA     3.97   7.26   96.4   93.7   79.6   NA     NA     NA     NA  
+ 21     NA     NA     NA     4.45   8.04    122   87.0   72.4   NA     NA     NA     NA  
+ 22     NA     NA     NA     15.5   7.26   92.4   78.4   72.4   NA     NA     NA     NA  
+ 23     NA     NA     NA     4.29   27.1   75.9    135   68.1   NA     NA     NA     NA  
+ 24     NA     NA     NA     4.45   8.81   71.3    107    269   NA     NA     NA     NA  
+ 25     NA     NA     NA     4.61   10.2   68.1   77.2    286   NA     NA     NA     NA  
+ 26     NA     NA     NA     4.45   7.00   62.6   74.7   92.4   NA     NA     NA     NA  
+ 27     NA     NA     NA     4.29   7.26   63.7   75.9   72.4   NA     NA     NA     NA  
+ 28     NA     NA     NA     4.45   8.04    132   79.6   68.1   NA     NA     NA     NA  
+ 29     NA     NA     NA     5.55   6.17   70.2    116   73.5   NA     NA     NA     NA  
+ 30     NA            NA     6.17   5.76   96.4    116   78.4   NA     NA     NA     NA  
+ 31     NA            NA            10.9           320   71.3          NA            NA  
+
+Min     NA     NA     NA     NA     5.14   6.38   74.7   68.1   53.9   NA     NA     NA     NA  
+Mean    NA     NA     NA     NA     10.3   53.5    111    105   NA     NA     NA     NA     NA  
+Max     NA     NA     NA     NA     60.7    231    320    388    105   NA     NA     NA     NA  
+
