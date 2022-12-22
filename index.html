@@ -16,6 +16,32 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <h2 class="site-heading text-center text-faded d-none d-lg-block">
+            
+            <p class="site-heading-upper text-primary mb-3" id="time"></p>
+        </h2>
+        
+      
+        <script>
+          function updateTime() {
+            var currentTime = new Date();
+            document.getElementById("time").innerHTML = currentTime.toLocaleTimeString();
+          }
+          setInterval(updateTime, 1000);
+        </script>
+      </body>
+<style>
+#clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+</style>
+    <body>
         <header> 
             <img class="circular_image" src="assets/img/intro.jpg"/> 
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
