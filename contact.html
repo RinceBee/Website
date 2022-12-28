@@ -16,20 +16,22 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <h2 class="site-heading text-center text-faded d-none d-lg-block">
-            
-            <p class="site-heading-upper text-primary mb-3" id="time"></p>
-        </h2>
-        
-      
-        <script>
-          function updateTime() {
-            var currentTime = new Date();
-            document.getElementById("time").innerHTML = currentTime.toLocaleTimeString();
-          }
-          setInterval(updateTime, 1000);
-        </script>
-      </body>
+   <h2 class="site-heading text-center text-faded d-none d-lg-block">
+    <p class="site-heading-upper text-primary mb-3" id="date"></p>
+    <p class="site-heading-upper text-primary mb-3" id="Time"></p>
+   </h2>
+
+     <script>
+    function updateDateTime() {
+      var currentDateTime = new Date();
+      var dateString = currentDateTime.toLocaleDateString();
+      var timeString = currentDateTime.toLocaleTimeString();
+      document.getElementById("date").innerHTML = "D: "+dateString;
+      document.getElementById("Time").innerHTML = "T: " +timeString;
+    }
+    setInterval(updateDateTime, 1000);
+    </script>
+ </body>
 <style>
 #clock {
   position: absolute;
