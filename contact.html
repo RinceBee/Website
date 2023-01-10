@@ -15,34 +15,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body>
-   <h2 class="site-heading text-center text-faded d-none d-lg-block">
-    <p style="font-size: 18px;" id="date"></p>
-    <p style="font-size: 18px;" id="Time"></p>
-   </h2>
-
-     <script>
-    function updateDateTime() {
-      var currentDateTime = new Date();
-      var dateString = currentDateTime.toLocaleDateString();
-      var timeString = currentDateTime.toLocaleTimeString();
-      document.getElementById("date").innerHTML = "D: "+dateString;
-      document.getElementById("Time").innerHTML = "T: " +timeString;
-    }
-    setInterval(updateDateTime, 1000);
-    </script>
- </body>
-<style>
-#clock {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
-}
-</style>
+    
     <body>
         <header>
             <img class="circular_image" src="assets/img/intro.jpg"/> 
@@ -69,6 +42,34 @@
                 </div>
             </div>
         </nav>
+        <body>
+            <h2 class="site-heading text-center text-faded d-none d-lg-block">
+             <p style="font-size: 18px;" id="date"></p>
+             <p style="font-size: 18px;" id="Time"></p>
+            </h2>
+         
+              <script>
+             function updateDateTime() {
+               var currentDateTime = new Date();
+               var dateString = currentDateTime.toLocaleDateString();
+               var timeString = currentDateTime.toLocaleTimeString();
+               document.getElementById("date").innerHTML = "D: "+dateString;
+               document.getElementById("Time").innerHTML = "T: " +timeString;
+             }
+             setInterval(updateDateTime, 1000);
+             </script>
+          </body>
+         <style>
+         #clock {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           font-size: 60px;
+           font-weight: bold;
+           text-align: center;
+         }
+         </style>
         <section class="page-section cta">
             <div class="container">
                 <div class="row">
