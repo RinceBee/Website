@@ -11506,3 +11506,43 @@ p {
   float:right;
   vertical-align:middle;
 }
+/* styles for small screens (smartphone screens) */
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .circular_image {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/* styles for larger screens (tablet and desktop screens) */
+@media (min-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .circular_image {
+    max-width: 20%;
+    display: inline-block;
+  }
+}
