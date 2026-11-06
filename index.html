@@ -204,12 +204,20 @@ footer{background:var(--ink);color:#aab8bf;font-size:.9rem;padding:28px 0;text-a
 <footer>© Kumar Baral 2025</footer>
 
 <script>
-(function(){
-  var el=document.getElementById('clock');
-  function tick(){
-    try{el.textContent=new Date().toLocaleTimeString('en-AU',{timeZone:'Australia/Sydney',hour:'2-digit',minute:'2-digit'})+' Sydney'}catch(e){}
+(function () {
+  var el = document.getElementById('clock');
+  function tick() {
+    try {
+      el.textContent = new Date().toLocaleTimeString('en-AU', {
+        timeZone: 'Australia/Sydney',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }) + ' Sydney';
+    } catch (e) {}
   }
-  tick();setInterval(tick,30000);
+  tick();
+  setInterval(tick, 1000);
 })();
 </script>
 </body>
