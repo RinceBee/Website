@@ -188,15 +188,17 @@ footer{background:var(--ink);color:#aab8bf;font-size:.9rem;padding:28px 0;text-a
         <li><a href="https://twitter.com/Rins_Bee" target="_blank" rel="noopener">Twitter / X</a></li>
       </ul>
     </div>
-    <form action ="https://formsubmit.co/kumar.baral572@gmail.com" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-      <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-      <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-      <div><label for="phone">Phone (optional)</label><input id="phone" name="number" type="tel" autocomplete="tel"></div>
-      <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
-      <button type="submit">Send message</button>
-    </form>
+     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+     <input type="hidden" name="access_key" value="PASTE_YOUR_ACCESS_KEY_HERE">
+     <input type="hidden" name="subject" value="New message from kumarbaral.com.np">
+     <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+     <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+     <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    <div><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+    <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+    <button type="submit" id="sendBtn">Send message</button>
+    <p id="formStatus" role="status" aria-live="polite"></p>
+</form>
   </div>
 </section>
 
@@ -218,6 +220,29 @@ footer{background:var(--ink);color:#aab8bf;font-size:.9rem;padding:28px 0;text-a
   tick();
   setInterval(tick, 1000);
   document.getElementById('year').textContent = new Date().getFullYear();
+js
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  var btn = document.getElementById('sendBtn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    status.textContent = 'Sending...';
+    fetch(form.action, { method: 'POST', body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.success) {
+          status.textContent = 'Thanks, your message has been sent.';
+          form.reset();
+        } else {
+          status.textContent = 'Sorry, something went wrong. Please try again.';
+        }
+      })
+      .catch(function () {
+        status.textContent = 'Sorry, the message could not be sent. Please try again later.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
 })();
 </script>
 </body>
