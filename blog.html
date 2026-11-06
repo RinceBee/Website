@@ -1,35 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Blog – Kumar Baral</title>
-<meta name="description" content="Notes and articles by Kumar Baral.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kumar Baral – Civil engineering, Land Development Engineering, geospatial analysis and design</title>
+<meta name="description" content="Kumar Baral: civil engineer and project manager in Western Sydney. Drainage, subdivision, geospatial analysis and structural design.">
 <link rel="icon" type="image/x-icon" href="assets/favicon2.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/blog.css">
+<style>
+:root{
+  --ink:#16222b; --paper:#f3f5f2; --water:#1f5f7a; --moss:#5d7a4a; --sand:#d9ded3; --white:#fff;
+  --head:'Bricolage Grotesque',system-ui,sans-serif; --body:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:18px/1.65 var(--body);color:var(--ink);background:var(--paper)}
+img{max-width:100%;display:block}
+a{color:var(--water)}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1.2rem}
+p{max-width:64ch}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--paper)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;min-height:56px;gap:16px;flex-wrap:wrap}
+nav .brand{font:700 1rem var(--head);color:var(--paper);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;padding:0}
+nav ul a{font:500 .95rem var(--head);color:var(--paper);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav ul a:hover{border-color:var(--moss)}
+#clock{font:500 .85rem var(--head);color:#aab8bf;font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--sand);padding:72px 0 88px}
+.contours{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.contours *{fill:none;stroke:var(--water);stroke-width:1}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6rem);font-weight:800;margin-bottom:1rem}
+.hero .role{font:500 1.15rem var(--head);color:var(--water);margin-bottom:1.2rem}
+.hero p{margin-bottom:1.6rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font:700 1rem var(--head);padding:12px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--paper)}
+.btn.main:hover{background:var(--water);border-color:var(--water)}
+.btn.alt{color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+.portrait{width:min(100%,340px);aspect-ratio:1;border-radius:50%;object-fit:cover;border:6px solid var(--paper);justify-self:center;background:var(--water)}
+
+section{padding:80px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.photos{display:grid;gap:16px}
+.photos img{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--sand)}
+.photos figcaption{font-size:.9rem;color:#4b5a63;margin-top:6px}
+blockquote{margin-top:2rem;padding-left:18px;border-left:4px solid var(--moss);font-style:italic;color:#34444d;max-width:60ch}
+blockquote cite{display:block;font:500 .9rem var(--head);font-style:normal;margin-top:6px}
+
+/* practice */
+#practice{background:var(--ink);color:var(--paper)}
+#practice h2{color:var(--paper)}
+.rows{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 40px}
+.row img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:14px;background:#24343e}
+.row h3{font-size:1.4rem;margin-bottom:.4rem}
+.row p{color:#cdd6da;font-size:1rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+form{display:grid;gap:16px}
+label{font:600 .9rem var(--head);display:block;margin-bottom:4px}
+input,textarea{width:100%;font:inherit;padding:11px 12px;border:2px solid #aeb9b4;border-radius:4px;background:var(--white);color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--water);outline:none}
+button{font:700 1rem var(--head);padding:13px 24px;background:var(--water);color:#fff;border:0;border-radius:4px;cursor:pointer;justify-self:start}
+button:hover{background:var(--ink)}
+.social{list-style:none;padding:0;display:grid;gap:8px;margin-top:1.2rem}
+.social a{font:600 1rem var(--head)}
+footer{background:var(--ink);color:#aab8bf;font-size:.9rem;padding:28px 0;text-align:center}
+
+@media(max-width:780px){
+  .hero .wrap,.about-grid,.contact-grid,.rows{grid-template-columns:1fr}
+  .portrait{order:-1;width:220px}
+  section{padding:56px 0}
+  nav ul{gap:14px}
+}
+</style>
 </head>
 <body>
+
 <nav aria-label="Main">
   <div class="wrap">
-    <a class="brand" href="index.html">Kumar Baral</a>
+    <a class="brand" href="#top">Kumar Baral</a>
     <ul>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#practice">Areas of Interest</a></li>
-      <li><a href="blog.html" class="current">Blog</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#practice">Areas of Interest</a></li>
+       <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <span id="clock" aria-label="Local time in Sydney"></span>
   </div>
 </nav>
+
 <header class="hero" id="top">
   <svg class="contours" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <g transform="translate(900 300)">
-      <ellipse rx="60" ry="36" transform="rotate(-18)"/><ellipse rx="120" ry="76" transform="rotate(-14)"/>
-      <ellipse rx="190" ry="124" transform="rotate(-10)"/><ellipse rx="270" ry="180" transform="rotate(-6)"/>
-      <ellipse rx="360" ry="240" transform="rotate(-2)"/><ellipse rx="460" ry="310" transform="rotate(2)"/>
+      <ellipse rx="60" ry="36" transform="rotate(-18)"/>
+      <ellipse rx="120" ry="76" transform="rotate(-14)"/>
+      <ellipse rx="190" ry="124" transform="rotate(-10)"/>
+      <ellipse rx="270" ry="180" transform="rotate(-6)"/>
+      <ellipse rx="360" ry="240" transform="rotate(-2)"/>
+      <ellipse rx="460" ry="310" transform="rotate(2)"/>
       <ellipse rx="570" ry="390" transform="rotate(6)"/>
     </g>
   </svg>
@@ -37,28 +118,133 @@
     <div>
       <h1>Kumar Baral</h1>
       <p class="role">A little about me and what I enjoy to do.</p>
+      <p> </p>
       <div class="btns">
-        <a class="btn main" href="index.html#practice">See what I do</a>
-        <a class="btn alt" href="index.html#contact">Get in touch</a>
+        <a class="btn main" href="#practice">See what I do</a>
+        <a class="btn alt" href="#contact">Get in touch</a>
       </div>
     </div>
     <img class="portrait" src="assets/img/intro.jpg" alt="Portrait of Kumar Baral">
   </div>
 </header>
-<main>
-  <div class="wrap">
-    <h2 class="page-title">Blog</h2>
-    <ul class="post-list">
-      <!-- NEW POSTS GO AT THE TOP: copy one <li> block and edit it -->
-      <li>
-        <time datetime="2026-11-06">6 November 2026</time>
-        <h2><a href="post-sample.html">How rainfall becomes runoff</a></h2>
-        <p>A short sample post showing how each article is laid out.</p>
-      </li>
-    </ul>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>G’day </h2>
+      <p>This is my personal corner of the internet. It covers my work, the things I do away from it, and how to reach me.</p>
+      <p style="margin-top:1rem"> Besides spending time with my family and travelling, I love rock climbing and trekking. Both teach the same thing : read the terrain before you commit to a route.</p>
+      <blockquote>
+        Great things are done by a series of small things brought together.
+        <cite>Vincent Van Gogh</cite>
+      </blockquote>
+    </div>
+    <div class="photos">
+      <figure><img src="assets/img/rockC1.jpg" alt="Rock climbing" loading="lazy"><figcaption>Rock Climbing(Via Ferrata, Digne-Les-Bians, France)</figcaption></figure>
+      <figure><img src="assets/img/trekking.jpg" alt="Trekking" loading="lazy"><figcaption>Trekking Annapurna Base Camp, Nepal</figcaption></figure>
+    </div>
   </div>
-</main>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <h2>Areas of Interest</h2>
+    <div class="rows">
+      <article class="row">
+        <img src="assets/img/lde.jpg" alt="Geospatial map analysis" loading="lazy">
+        <h3>Land Development Engineering</h3>
+        <p>  Land development engineering transforms raw land into sites ready for construction. It brings together drainage, earthworks, road design and essential services. I enjoy the work because it combines technical problem-solving with practical design, turning ideas and plans into real developments.</p>
+      </article>
+      <article class="row">
+        <img src="assets/img/catchment.jpg" alt="Structural design" loading="lazy">
+        <h3>Hydrology and Hydraulics</h3>
+        <p>Hydrology looks at how rainfall becomes runoff across a catchment, and hydraulics looks at how that water moves through pipes, channels and floodways. Together they show how a site will handle storms, so drainage can be designed to protect both the development and the land downstream.</p>
+      </article>
+      <article class="row">
+        <img src="assets/img/products-03.jpg" alt="Data graphics" loading="lazy">
+        <h3>Graphical visualisation</h3>
+        <p>Large datasets are hard to read as tables. I use graphs and maps to show the result first and the detail second.</p>
+      </article>
+      <article class="row">
+        <img src="assets/img/products-02.jpg" alt="Presentation of engineering drawings" loading="lazy">
+        <h3>Presentation</h3>
+        <p>Drawings, reports and submissions that a reader can follow without a guided tour.</p>
+      </article>
+    </div>
+    <!-- Replace with real experience: employer, role, years, project types. -->
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Contact</h2>
+      <p>Please use the contact form to reach me. You can also contact via social media.</p>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/kumarbaral" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/rincebee" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.youtube.com/channel/UC67Gah9TW7q3c6_KQMnvKzw" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/rins_bee57" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/rinsbe" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://twitter.com/Rins_Bee" target="_blank" rel="noopener">Twitter / X</a></li>
+      </ul>
+    </div>
+     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+     <input type="hidden" name="access_key" value="d5d3daaa-56d8-4475-bedf-1586e9cc5486">
+     <input type="hidden" name="subject" value="New message from kumarbaral.com.np">
+     <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+     <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+     <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    <div><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+    <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+    <button type="submit" id="sendBtn">Send message</button>
+    <p id="formStatus" role="status" aria-live="polite"></p>
+</form>
+  </div>
+</section>
+
 <footer>© Kumar Baral <span id="year">2026</span></footer>
-<script src="js/blog.js"></script>
+
+<script>
+(function () {
+  var el = document.getElementById('clock');
+  function tick() {
+    try {
+      el.textContent = new Date().toLocaleTimeString('en-AU', {
+        timeZone: 'Australia/Sydney',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }) + ' Sydney';
+    } catch (e) {}
+  }
+  tick();
+  setInterval(tick, 1000);
+  document.getElementById('year').textContent = new Date().getFullYear();
+js
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  var btn = document.getElementById('sendBtn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    status.textContent = 'Sending...';
+    fetch(form.action, { method: 'POST', body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.success) {
+          status.textContent = 'Thanks, your message has been sent.';
+          form.reset();
+        } else {
+          status.textContent = 'Sorry, something went wrong. Please try again.';
+        }
+      })
+      .catch(function () {
+        status.textContent = 'Sorry, the message could not be sent. Please try again later.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>
