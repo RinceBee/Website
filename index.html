@@ -1,120 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Official website of Kumar Baral</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <h2 class="site-heading text-center text-faded d-none d-lg-block">
-            
-            <p class="site-heading-upper text-primary mb-3" id="time"></p>
-        </h2>
-        
-      
-        <script>
-          function updateTime() {
-            var currentTime = new Date();
-            document.getElementById("time").innerHTML = currentTime.toLocaleTimeString();
-          }
-          setInterval(updateTime, 1000);
-        </script>
-      </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kumar Baral – Civil engineering, geospatial analysis and design</title>
+<meta name="description" content="Kumar Baral: civil engineer and project manager in Western Sydney. Drainage, subdivision, geospatial analysis and structural design.">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-#clock {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
+:root{
+  --ink:#16222b; --paper:#f3f5f2; --water:#1f5f7a; --moss:#5d7a4a; --sand:#d9ded3; --white:#fff;
+  --head:'Bricolage Grotesque',system-ui,sans-serif; --body:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:18px/1.65 var(--body);color:var(--ink);background:var(--paper)}
+img{max-width:100%;display:block}
+a{color:var(--water)}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1.2rem}
+p{max-width:64ch}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--paper)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;min-height:56px;gap:16px;flex-wrap:wrap}
+nav .brand{font:700 1rem var(--head);color:var(--paper);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;padding:0}
+nav ul a{font:500 .95rem var(--head);color:var(--paper);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav ul a:hover{border-color:var(--moss)}
+#clock{font:500 .85rem var(--head);color:#aab8bf;font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--sand);padding:72px 0 88px}
+.contours{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.contours *{fill:none;stroke:var(--water);stroke-width:1}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6rem);font-weight:800;margin-bottom:1rem}
+.hero .role{font:500 1.15rem var(--head);color:var(--water);margin-bottom:1.2rem}
+.hero p{margin-bottom:1.6rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font:700 1rem var(--head);padding:12px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--paper)}
+.btn.main:hover{background:var(--water);border-color:var(--water)}
+.btn.alt{color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+.portrait{width:min(100%,340px);aspect-ratio:1;border-radius:50%;object-fit:cover;border:6px solid var(--paper);justify-self:center;background:var(--water)}
+
+section{padding:80px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.photos{display:grid;gap:16px}
+.photos img{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--sand)}
+.photos figcaption{font-size:.9rem;color:#4b5a63;margin-top:6px}
+blockquote{margin-top:2rem;padding-left:18px;border-left:4px solid var(--moss);font-style:italic;color:#34444d;max-width:60ch}
+blockquote cite{display:block;font:500 .9rem var(--head);font-style:normal;margin-top:6px}
+
+/* practice */
+#practice{background:var(--ink);color:var(--paper)}
+#practice h2{color:var(--paper)}
+.rows{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 40px}
+.row img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:14px;background:#24343e}
+.row h3{font-size:1.4rem;margin-bottom:.4rem}
+.row p{color:#cdd6da;font-size:1rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+form{display:grid;gap:16px}
+label{font:600 .9rem var(--head);display:block;margin-bottom:4px}
+input,textarea{width:100%;font:inherit;padding:11px 12px;border:2px solid #aeb9b4;border-radius:4px;background:var(--white);color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--water);outline:none}
+button{font:700 1rem var(--head);padding:13px 24px;background:var(--water);color:#fff;border:0;border-radius:4px;cursor:pointer;justify-self:start}
+button:hover{background:var(--ink)}
+.social{list-style:none;padding:0;display:grid;gap:8px;margin-top:1.2rem}
+.social a{font:600 1rem var(--head)}
+footer{background:var(--ink);color:#aab8bf;font-size:.9rem;padding:28px 0;text-align:center}
+
+@media(max-width:780px){
+  .hero .wrap,.about-grid,.contact-grid,.rows{grid-template-columns:1fr}
+  .portrait{order:-1;width:220px}
+  section{padding:56px 0}
+  nav ul{gap:14px}
 }
 </style>
-    <body>
-        <header> 
-            <img class="circular_image" src="assets/img/intro.jpg"/> 
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">    </span>
-                <span class="site-heading-lower text-primary mb-3">home</span>  
-            </h1>
-        </header>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Click here to expand</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="skills.html">Profession</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/Profilepic.jpg" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper"> G'day mate!! </span>
-                            <span class="section-heading-lower">Welcome</span>
-                        </h2>
-                        <p class="mb-3"> to my personal corner of the internet! 
-                            I'm delighted to have you visit. 
-                            Here, I invite you to delve into my world of passions, experiences, and insights. 
-                            Through this website, I aim to share my journey, thoughts, and creative endeavors with you. 
-                            From articles that reflect my unique perspective to updates on my latest projects, 
-                            you'll find a tapestry of my life woven into these digital pages. So, take a virtual
-                            step into my realm, explore, and enjoy the stories that shape who I am. 
-                            Thank you for joining me on this online odyssey!.</p>
-                        <p class="mb-3"> </p>
-                        <p class="mb-3"> </p>
-                            <p class="mb-3"> </p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl">  </a> </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="page-section cta">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-9 mx-auto">
-                        <div class="cta-inner bg-faded text-center rounded">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">Aristotle</span>
-                                <span class="section-heading-lower">once said</span>
-                            </h2>
-                            <p class="mb-0">Persuasion is achieved by the speaker's personal character 
-                                when the speech is spoken as to make us think him credible. We believe 
-                                good men more fully and more readily than others. This is true generally 
-                                whatever the question is, and absolutely true where exact certainty is 
-                                impossible and opinions are divided.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">Copyright &copy; RinceBee 2025</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Kumar Baral</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#practice">Profession</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span id="clock" aria-label="Local time in Sydney"></span>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="contours" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g transform="translate(900 300)">
+      <ellipse rx="60" ry="36" transform="rotate(-18)"/>
+      <ellipse rx="120" ry="76" transform="rotate(-14)"/>
+      <ellipse rx="190" ry="124" transform="rotate(-10)"/>
+      <ellipse rx="270" ry="180" transform="rotate(-6)"/>
+      <ellipse rx="360" ry="240" transform="rotate(-2)"/>
+      <ellipse rx="460" ry="310" transform="rotate(2)"/>
+      <ellipse rx="570" ry="390" transform="rotate(6)"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <h1>Kumar Baral</h1>
+      <p class="role">Civil engineer and project manager, Western Sydney</p>
+      <p>I work on drainage, subdivisions and site compliance, and I use geospatial analysis and clear graphics to turn large datasets into decisions people can act on.</p>
+      <div class="btns">
+        <a class="btn main" href="#practice">See what I do</a>
+        <a class="btn alt" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <img class="portrait" src="assets/img/Profilepic.jpg" alt="Portrait of Kumar Baral">
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>G’day, I’m Kumar</h2>
+      <p>This is my personal corner of the internet. It covers my work, the things I do away from it, and how to reach me.</p>
+      <p style="margin-top:1rem">Away from site visits and council submissions I’m usually climbing rock or out trekking. Both teach the same thing I rely on at work: read the terrain before you commit to a route.</p>
+      <blockquote>
+        Persuasion is achieved by the speaker’s personal character when the speech is spoken as to make us think him credible.
+        <cite>Aristotle, Rhetoric (paraphrased)</cite>
+      </blockquote>
+    </div>
+    <div class="photos">
+      <figure><img src="assets/img/rockC1.jpg" alt="Rock climbing" loading="lazy"><figcaption>Climbing</figcaption></figure>
+      <figure><img src="assets/img/trekking.jpg" alt="Trekking" loading="lazy"><figcaption>Trekking</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <h2>Profession</h2>
+    <div class="rows">
+      <article class="row">
+        <img src="assets/img/products-01.jpg" alt="Geospatial map analysis" loading="lazy">
+        <h3>Geospatial analysis</h3>
+        <p>Examining spatial data to find patterns, relationships and trends. It supports decisions in urban planning, environmental management and infrastructure development.</p>
+      </article>
+      <article class="row">
+        <img src="assets/img/structre.jpg" alt="Structural design" loading="lazy">
+        <h3>Structural analysis and design</h3>
+        <p>Checking that a structure is stable and sound, then developing solutions that are as cost-effective as the problem allows.</p>
+      </article>
+      <article class="row">
+        <img src="assets/img/products-03.jpg" alt="Data graphics" loading="lazy">
+        <h3>Graphical visualisation</h3>
+        <p>Large datasets are hard to read as tables. I use graphs and maps to show the result first and the detail second.</p>
+      </article>
+      <article class="row">
+        <img src="assets/img/products-02.jpg" alt="Presentation of engineering drawings" loading="lazy">
+        <h3>Presentation</h3>
+        <p>Drawings, reports and submissions that a reader can follow without a guided tour.</p>
+      </article>
+    </div>
+    <!-- Replace with real experience: employer, role, years, project types. -->
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Contact</h2>
+      <p>For any query, use the form and I’ll reply by email.</p>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/kumarbaral" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/rincebee" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.youtube.com/channel/UC67Gah9TW7q3c6_KQMnvKzw" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/rincebe" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/rinsbe" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://twitter.com/Rins_Bee" target="_blank" rel="noopener">Twitter / X</a></li>
+      </ul>
+    </div>
+    <form action="https://formsubmit.co/kumar.baral572@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://kumarbaral.com.np/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+      <div><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="phone">Phone (optional)</label><input id="phone" name="number" type="tel" autocomplete="tel"></div>
+      <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+      <button type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>© Kumar Baral 2025</footer>
+
+<script>
+(function(){
+  var el=document.getElementById('clock');
+  function tick(){
+    try{el.textContent=new Date().toLocaleTimeString('en-AU',{timeZone:'Australia/Sydney',hour:'2-digit',minute:'2-digit'})+' Sydney'}catch(e){}
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+</body>
 </html>
